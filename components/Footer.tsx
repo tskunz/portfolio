@@ -151,7 +151,7 @@ export default function Footer() {
           className="text-center mt-8"
         >
           <p className="text-xs text-slate-500">
-            "The best way to predict the future is to invent it." - Alan Kay
+            &quotThe best way to predict the future is to invent it.&quot - Alan Kay
           </p>
         </motion.div>
       </div>
