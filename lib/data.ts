@@ -138,6 +138,26 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/tskunz/Webscraping-Demo",
     category: "Web Development",
     imageUrl: "/projects/webscraping.jpg"
+  },
+  {
+    id: "mortgage-refinance-calculator",
+    title: "Mortgage Refinance Calculator",
+    status: "Complete",
+    description: "Interactive financial calculator for mortgage refinancing analysis with amortization schedules and break-even calculations.",
+    longDescription: "A comprehensive mortgage refinance calculator built with React that helps homeowners analyze potential savings from refinancing. Features detailed amortization schedules, break-even analysis, and interactive charts for comparing loan scenarios.",
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Chart.js", "Vercel"],
+    features: [
+      "Monthly payment calculations",
+      "Amortization schedule generation",
+      "Break-even analysis",
+      "Interactive comparison charts",
+      "Responsive mobile design",
+      "Real-time calculations"
+    ],
+    demoUrl: "https://mortgage-refinance-calculator-sage.vercel.app/",
+    githubUrl: "https://github.com/tskunz/Mortgage-Refinance-Calculator",
+    category: "Web Development",
+    imageUrl: "/projects/mortgage-calculator.jpg"
   }
 ];
 
