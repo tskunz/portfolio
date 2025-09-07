@@ -159,10 +159,10 @@ export default function About() {
           className="text-center mt-16"
         >
           <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Let's Build Something Amazing</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Let&apos;s Build Something Amazing</h3>
             <p className="text-slate-400 mb-6 max-w-2xl mx-auto">
               I&apos;m always excited to collaborate on innovative AI projects or discuss 
-              how data science can solve real-world problems. Let's connect!
+              how data science can solve real-world problems. Let&apos;s connect!
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <motion.a
