@@ -39,7 +39,7 @@ export default function Footer() {
             {/* Contact CTA */}
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                Let's Work Together
+                Let&apos;s Work Together
               </span>
             </h2>
             
