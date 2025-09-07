@@ -1,4 +1,4 @@
-# Trevor S. Kunz - AI/Data Science Portfolio
+# Trevor Kunz - AI/Data Science Portfolio
 
 A modern, responsive portfolio website built with Next.js 14, showcasing AI and data science projects with interactive animations and a sleek dark theme.
 
