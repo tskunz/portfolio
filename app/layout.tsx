@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Trevor S. Kunz | AI/Data Science Portfolio",
-  description: "AI/Data Science Graduate Student specializing in generative AI, machine learning, and data engineering. Exploring the intersection of business operations and cutting-edge AI technologies.",
+  title: "Trevor Kunz | AI/Data Science Portfolio",
+  description: "Data Science Graduate Student specializing in generative AI, machine learning, and business operations. Exploring the intersection of business operations and cutting-edge AI technologies.",
   keywords: [
     "AI",
     "Data Science", 
@@ -24,22 +24,23 @@ export const metadata: Metadata = {
     "Next.js",
     "LangChain",
     "Supply Chain",
-    "SMU"
+    "SMU",
+    "BYU"
   ],
-  authors: [{ name: "Trevor S. Kunz" }],
-  creator: "Trevor S. Kunz",
+  authors: [{ name: "Trevor Kunz" }],
+  creator: "Trevor Kunz",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://tskunz.github.io",
-    title: "Trevor S. Kunz | AI/Data Science Portfolio",
-    description: "AI/Data Science Graduate Student specializing in generative AI and machine learning.",
+    title: "Trevor Kunz | AI/Data Science Portfolio",
+    description: "Data Science Graduate Student specializing in generative AI and machine learning.",
     siteName: "Trevor Kunz Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trevor S. Kunz | AI/Data Science Portfolio",
-    description: "AI/Data Science Graduate Student specializing in generative AI and machine learning.",
+    title: "Trevor Kunz | AI/Data Science Portfolio",
+    description: "Data Science Graduate Student specializing in generative AI and machine learning.",
     creator: "@tskunz",
   },
   robots: {
