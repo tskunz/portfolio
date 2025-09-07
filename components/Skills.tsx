@@ -141,7 +141,7 @@ export default function Skills() {
             </motion.div>
             <h3 className="text-xl font-bold text-white mb-4">Always Learning</h3>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              The AI and data science landscape evolves rapidly, and so do I. I'm constantly 
+              The AI and data science landscape evolves rapidly, and so do I. I&apos;m constantly 
               exploring new frameworks, techniques, and methodologies to stay at the forefront 
               of technological innovation. Currently diving deep into multimodal AI and 
               advanced prompt engineering techniques.

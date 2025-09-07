@@ -45,7 +45,7 @@ export default function Footer() {
             
             <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed mb-8">
               Have a project in mind or want to discuss AI and data science? 
-              I'd love to hear from you and explore how we can create something amazing together.
+              I&apos;d love to hear from you and explore how we can create something amazing together.
             </p>
 
             {/* Contact Button */}

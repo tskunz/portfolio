@@ -36,7 +36,7 @@ export default function Projects() {
           
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              Things I've Built
+              Things I&apos;ve Built
             </span>
           </h2>
           
@@ -92,7 +92,7 @@ export default function Projects() {
           <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">More Projects Coming Soon!</h3>
             <p className="text-slate-400 mb-6 max-w-2xl mx-auto">
-              I'm constantly working on new projects and experiments. Follow my GitHub 
+              I&apos;m constantly working on new projects and experiments. Follow my GitHub 
               for the latest updates and contributions to open-source AI projects.
             </p>
             <motion.a
