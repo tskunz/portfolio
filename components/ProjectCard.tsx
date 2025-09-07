@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { ExternalLink, Github, Calendar, Tag } from 'lucide-react';
 import { Project, statusColors, categoryColors } from '@/lib/data';
 
@@ -34,12 +35,13 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
 
         {/* Project Image Placeholder */}
-        <div className="w-full h-48 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+        <div className="relative w-full h-48 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
           {project.imageUrl ? (
-            <img 
-              src={project.imageUrl} 
+            <Image
+              src={project.imageUrl}
               alt={project.title}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
             />
           ) : (
             <div className="text-slate-500 text-center">
