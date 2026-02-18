@@ -195,7 +195,7 @@ export const projects: Project[] = [
       "Responsive mobile design",
       "Real-time calculations"
     ],
-    demoUrl: "https://mortgage-refinance-calculator.vercel.app",
+    // demoUrl: "https://mortgage-refinance-calculator.vercel.app",
     githubUrl: "https://github.com/tskunz/Mortgage-Refinance-Calculator",
     category: "Web Development",
     imageUrl: "/projects/mortgage-calculator.jpg"
