@@ -10,8 +10,20 @@ export interface Project {
   features: string[];
   demoUrl?: string;
   githubUrl?: string;
+  huggingFaceUrl?: string;
   imageUrl?: string;
   category: 'AI/ML' | 'Data Science' | 'Web Development' | 'Research';
+}
+
+export interface Publication {
+  id: string;
+  title: string;
+  type: 'Medium Article' | 'Research Paper' | 'Technical Report' | 'Preprint';
+  date: string;
+  description: string;
+  url?: string;
+  coAuthors?: string[];
+  status: 'Published' | 'In Review' | 'Forthcoming';
 }
 
 export interface Skill {
@@ -37,107 +49,136 @@ export interface PersonalInfo {
     github: string;
     linkedin: string;
     twitter?: string;
+    huggingface?: string;
+    youtube?: string;
   };
 }
 
 // Personal Information
 export const personalInfo: PersonalInfo = {
-  name: "Trevor S. Kunz",
-  title: "AI/Data Science Graduate Student",
+  name: "Trevor Kunz",
+  title: "Founder, TJ's Data Kitchen | Data Scientist | AI Developer",
   location: "Phoenix, Arizona",
-  currentRole: "Spares Planner & Expeditor at Lam Research Corporation",
+  currentRole: "Founder & Data Scientist at TJ's Data Kitchen | Spares Escalations at Lam Research",
   education: [
     {
       degree: "MS Data Science",
       school: "Southern Methodist University",
-      status: "Current"
+      status: "Graduated December 2025"
     },
     {
       degree: "BS Global Supply Chain Management",
       school: "Brigham Young University",
-      status: "Completed"
+      status: "Graduated December 2018"
     }
   ],
-  interests: ["Travel", "Cooking", "Running", "Soccer", "Ultimate Frisbee"],
-  bio: "Passionate about leveraging AI and data science to solve complex problems. Currently pursuing my Master's in Data Science while working in supply chain operations, bringing a unique perspective that combines practical business experience with cutting-edge AI technologies.",
-  email: "tkunz@smu.edu",
+  interests: [
+    "Large Language Models",
+    "Generative AI",
+    "Supply Chain Analytics",
+    "BBQ & Cooking Science",
+    "Running, Soccer, & Ultimate Frisbee"
+  ],
+  bio: "Founder of TJ's Data Kitchen, combining data science with culinary arts to make complex ML concepts accessible. Built production ML systems including custom RAG embeddings and transformers from scratch. Former TA in statistics and experimental design at SMU. 6+ years operational experience in Fortune 500 manufacturing. Passionate about applying rigorous data science to real-world problems—whether optimizing energy grids or perfecting char siu through physics-informed modeling.",
+  email: "tjdatakitchen@gmail.com",
   social: {
     github: "https://github.com/tskunz",
-    linkedin: "https://linkedin.com/in/trevor-kunz"
+    linkedin: "https://linkedin.com/in/trevor-kunz",
+    huggingface: "https://huggingface.co/Tskunz",
+    youtube: "https://youtube.com/@Tjdatakitchen"
   }
 };
 
 // Featured Projects
 export const projects: Project[] = [
   {
-    id: "rag-cooking-assistant",
-    title: "RAG Cooking Assistant",
+    id: "tj-data-kitchen",
+    title: "TJ's Data Kitchen - Founder & Data Scientist",
     status: "In Development",
-    description: "Intelligent recipe recommendations using retrieval-augmented generation with dietary restrictions and ingredient substitutions.",
-    longDescription: "A sophisticated cooking assistant that leverages RAG (Retrieval-Augmented Generation) to provide personalized recipe recommendations. The system understands dietary restrictions, suggests ingredient substitutions, and learns from user preferences to improve recommendations over time.",
-    techStack: ["Python", "LangChain", "ChromaDB", "OpenAI API", "Streamlit", "FastAPI"],
+    description: "Data science education platform combining ML, physics modeling, and culinary science. Building audience for technical concepts through accessible cooking content.",
+    longDescription: "Founded educational media venture exploring the intersection of data science and cooking. First project: Project Pitmaster - physics-informed machine learning for BBQ temperature prediction combining thermal dynamics modeling with XGBoost and Monte Carlo simulation. Incorporates domain expertise from line cooking background with rigorous data science methodology. Create educational content explaining complex data science concepts through accessible culinary applications. Responsible for end-to-end pipeline: research, modeling, content strategy, video production, and audience growth. Launching with Chinese New Year char siu series. Draft Medium article documenting methodology and results.",
+    techStack: ["Python", "XGBoost", "Monte Carlo Simulation", "Physics-Informed Modeling", "Thermal Dynamics", "Data Visualization", "Content Strategy", "Video Production"],
     features: [
-      "Natural language recipe search",
-      "Dietary restriction filtering",
-      "Intelligent ingredient substitutions",
-      "Nutritional information integration",
-      "Personalized recommendations"
+      "Founder & lead data scientist of education platform",
+      "Project Pitmaster: Physics-informed BBQ temperature modeling",
+      "Combines thermal dynamics with XGBoost for predictive cook time optimization",
+      "Monte Carlo simulation for uncertainty quantification",
+      "Recipe experimentation with A/B testing methodology",
+      "Heritage recipe preservation through data analysis",
+      "Educational content for non-technical audiences",
+      "End-to-end content pipeline: research → model → production → distribution"
     ],
-    category: "AI/ML",
-    imageUrl: "/projects/rag-cooking.jpg"
+    category: "Data Science",
+    demoUrl: "https://youtube.com/@Tjdatakitchen",
+    githubUrl: "https://github.com/tskunz/Project-Pitmaster" //,
+    //imageUrl: "/projects/data-kitchen.jpg"
   },
   {
-    id: "multimodal-food-classifier",
-    title: "Multi-Modal Food Classifier",
-    status: "Planning",
-    description: "Upload food images to get recipes and nutritional information using computer vision and multi-modal AI.",
-    longDescription: "An advanced computer vision system that can identify food items from images and provide detailed recipes, nutritional information, and cooking instructions. Uses state-of-the-art multi-modal models to understand both visual and textual context.",
-    techStack: ["PyTorch", "CLIP", "FastAPI", "React", "OpenCV", "Hugging Face"],
+    id: "ercot-availability-model",
+    title: "ERCOT Availability Model",
+    status: "Complete",
+    description: "Probabilistic framework evaluating hyperscale AI data center impact on Texas grid reliability and compliance with Senate Bill 6.",
+    longDescription: "Developed a comprehensive framework to assess how AI hyperscale data centers with flexible loads and battery storage can support grid stability. Built hybrid forecasting model (Linear Regression + XGBoost) achieving 88% R² on 96,000+ hourly ERCOT samples. Implemented Monte Carlo simulation to quantify probabilistic availability under various operational scenarios. Methodology recognized by biostatistics faculty for superior interpretability compared to differential equations approaches.",
+    techStack: ["Python", "XGBoost", "Pandas", "NumPy", "Monte Carlo Simulation", "Time Series CV", "Scikit-learn"],
     features: [
-      "Image-based food recognition",
-      "Multi-modal understanding",
-      "Recipe generation from images",
-      "Nutritional analysis",
-      "Ingredient identification"
-    ],
-    category: "AI/ML",
-    imageUrl: "/projects/food-classifier.jpg"
-  },
-  {
-    id: "supply-chain-llm-optimizer",
-    title: "Supply Chain LLM Optimizer",
-    status: "Research",
-    description: "Leveraging Large Language Models for intelligent supply chain decision making and optimization.",
-    longDescription: "Research project exploring how LLMs can be applied to complex supply chain optimization problems. Focuses on inventory management, demand forecasting, and supplier relationship optimization using natural language processing and reasoning capabilities.",
-    techStack: ["GPT-4", "Pandas", "Plotly", "Docker", "PostgreSQL", "Apache Airflow"],
-    features: [
-      "Natural language supply chain queries",
-      "Intelligent demand forecasting",
-      "Supplier performance analysis",
-      "Risk assessment automation",
-      "Decision support system"
+      "Hybrid forecasting combining interpretable regression with gradient boosting",
+      "5-fold time series cross-validation preventing data leakage",
+      "Monte Carlo probabilistic modeling for reliability assessment",
+      "Quantified blackout probability (LOLP) and magnitude (EENS) reduction",
+      "Texas Senate Bill 6 compliance framework",
+      "Advanced residual diagnostics (autocorrelation, heteroskedasticity)"
     ],
     category: "Research",
-    imageUrl: "/projects/supply-chain.jpg"
+    githubUrl: "https://github.com/tskunz/ERCOT-Availability-Model" //,
+    // imageUrl: "/projects/ercot-grid.jpg"
   },
   {
-    id: "webscraping-tutorial",
-    title: "Web Scraping Educational Demo",
+    id: "paul-graham-rag",
+    title: "Custom Embedding Models & RAG System",
     status: "Complete",
-    description: "Comprehensive web scraping tutorial demonstrating ethical scraping practices on educational websites.",
-    longDescription: "A complete educational resource for learning web scraping with Python. Includes examples for multiple practice websites, demonstrates best practices for ethical scraping, and covers various data extraction patterns.",
-    techStack: ["Python", "BeautifulSoup", "Requests", "Pandas", "JSON"],
+    description: "Domain-specific RAG system with custom BERT-based embedding models trained from scratch, achieving superior retrieval performance.",
+    longDescription: "Built production-ready RAG system for Paul Graham essays with custom embedding models. Trained THREE distinct bi-encoder architectures: MNR Loss (supervised), SimCSE (unsupervised), and LoRA fine-tuned Gemma-1b adapter. Comparative analysis across supervised, unsupervised, and adapter-based approaches. Engineered synthetic data pipeline using Groq API (Llama 3, Qwen 3) to generate 2,200+ high-quality Q&A pairs. Deployed multiple models to Hugging Face achieving superior MRR and nDCG metrics compared to baseline pre-trained embeddings.",
+    techStack: ["Python", "PyTorch", "Hugging Face Transformers", "BERT", "Gemma", "LoRA", "Groq API", "LangChain", "ChromaDB", "Sentence-Transformers"],
     features: [
-      "Multi-site scraping examples",
-      "Ethical scraping practices",
-      "Data cleaning and storage",
-      "Error handling patterns",
-      "Comprehensive documentation"
+      "Trained THREE embedding models: MNR Loss, SimCSE, and LoRA fine-tuned Gemma-1b",
+      "Deployed models to Hugging Face: pg-mnr-bert, pg-simcse-bert, gemma-1b-pg-adapter",
+      "Comparative analysis across supervised, unsupervised, and adapter-based approaches",
+      "Multiple Negatives Ranking Loss for supervised learning",
+      "SimCSE architecture for unsupervised learning",
+      "LoRA fine-tuning on Gemma-1b for adapter-based embeddings",
+      "Automated synthetic Q&A generation pipeline (2,200+ pairs)",
+      "Superior retrieval metrics (MRR, nDCG) vs. baseline models",
+      "End-to-end RAG pipeline with vector database integration"
     ],
-    demoUrl: "https://github.com/tskunz/Webscraping-Demo",
-    githubUrl: "https://github.com/tskunz/Webscraping-Demo",
-    category: "Web Development",
-    imageUrl: "/projects/webscraping.jpg"
+    category: "AI/ML",
+    githubUrl: "https://github.com/tskunz/Pre-train-post-train-and-RAG",
+    huggingFaceUrl: "https://huggingface.co/Tskunz/pg-mnr-bert",
+    // Additional models on HuggingFace:
+    // https://huggingface.co/Tskunz/pg-simcse-bert
+    // https://huggingface.co/Tskunz/gemma-1b-pg-adapter
+    imageUrl: "/projects/rag-embeddings.jpg"
+  },
+  {
+    id: "tiny-stories-qwen3",
+    title: "Qwen3-Style LLM from Scratch",
+    status: "Complete",
+    description: "Transformer architecture implementation from first principles, featuring modern LLM innovations like Grouped Query Attention and RoPE.",
+    longDescription: "Engineered a complete Qwen3-style language model in PyTorch to master modern transformer architecture. Implemented Grouped Query Attention (GQA) for efficient inference, Rotary Positional Embeddings (RoPE) for better length generalization, RMSNorm for training stability, and SwiGLU feed-forward networks. Added custom embedding hooks for classification tasks and optimized training efficiency. Trained on TinyStories dataset demonstrating deep understanding of LLM internals beyond using pre-trained models.",
+    techStack: ["PyTorch", "Transformers", "Hugging Face", "Python", "CUDA", "Google Colab"],
+    features: [
+      "Grouped Query Attention (GQA) implementation",
+      "Rotary Positional Embeddings (RoPE)",
+      "RMSNorm layer normalization",
+      "SwiGLU activation functions",
+      "Custom embedding hooks for downstream tasks",
+      "Training optimization with mixed precision",
+      "Trained from scratch on TinyStories dataset",
+      "Complete transformer architecture understanding"
+    ],
+    category: "AI/ML",
+    githubUrl: "https://github.com/tskunz/GenAI_Midterm_Qwen3_Small",
+    // huggingFaceUrl: "https://huggingface.co/Tskunz/tiny-stories-qwen3", // Deploy when ready
+    imageUrl: "/projects/transformer-architecture.jpg"
   },
   {
     id: "mortgage-refinance-calculator",
@@ -154,85 +195,103 @@ export const projects: Project[] = [
       "Responsive mobile design",
       "Real-time calculations"
     ],
+    demoUrl: "https://mortgage-refinance-calculator.vercel.app",
     githubUrl: "https://github.com/tskunz/Mortgage-Refinance-Calculator",
     category: "Web Development",
     imageUrl: "/projects/mortgage-calculator.jpg"
   }
 ];
 
+// Publications and Articles
+export const publications: Publication[] = [
+  {
+    id: "ercot-capstone-paper",
+    title: "Probabilistic Framework for Evaluating AI Data Center Grid Reliability Contributions",
+    type: "Research Paper",
+    date: "2025",
+    description: "Capstone research paper developing methodology to quantify how hyperscale AI data centers with flexible loads and battery storage can support Texas grid stability under Senate Bill 6 requirements.",
+    coAuthors: ["Troy McSimov", "Jeff Billo"],
+    status: "Forthcoming",
+    url: "" // Will add once published
+  },
+];
+
 // Skills and Technologies
 export const skills: Skill[] = [
-  {
-    category: "Generative AI",
-    technologies: [
-      "LangChain",
-      "OpenAI API",
-      "Anthropic Claude",
-      "Prompt Engineering",
-      "RAG Systems",
-      "Vector Databases"
-    ],
-    icon: "brain"
-  },
   {
     category: "Machine Learning & Deep Learning",
     technologies: [
       "PyTorch",
-      "TensorFlow",
+      "Hugging Face Transformers",
       "Scikit-learn",
-      "Hugging Face",
-      "Computer Vision",
-      "NLP"
+      "XGBoost",
+      "TensorFlow",
+      "LLM Training & Fine-tuning",
+      "Computer Vision"
     ],
     icon: "cpu"
   },
   {
-    category: "Data Engineering",
+    category: "Generative AI & NLP",
+    technologies: [
+      "LangChain",
+      "RAG Systems",
+      "Custom Embedding Models",
+      "Prompt Engineering",
+      "Vector Databases (ChromaDB)",
+      "Sentence Transformers"
+    ],
+    icon: "brain"
+  },
+  {
+    category: "Data Science & Statistics",
     technologies: [
       "Python",
+      "R",
+      "Pandas",
+      "NumPy",
+      "Statistical Modeling",
+      "Experimental Design",
+      "A/B Testing",
+      "Time Series Analysis"
+    ],
+    icon: "bar-chart"
+  },
+  {
+    category: "Data Engineering & Cloud",
+    technologies: [
       "SQL",
+      "Azure (exposure)",
+      "Google Colab (GPU/TPU)",
+      "Git/GitHub",
       "Docker",
-      "FastAPI",
-      "Apache Airflow",
       "PostgreSQL"
     ],
     icon: "database"
   },
   {
+    category: "Business Intelligence",
+    technologies: [
+      "PowerBI",
+      "Tableau",
+      "Excel Automation (VBA)",
+      "SAP Integration",
+      "Dashboard Design",
+      "Data Visualization"
+    ],
+    icon: "chart-line"
+  },
+  {
     category: "Web Development",
     technologies: [
-      "Next.js",
       "React",
       "TypeScript",
       "Tailwind CSS",
-      "Node.js",
-      "REST APIs"
+      "Next.js",
+      "Streamlit",
+      "FastAPI"
     ],
     icon: "code"
-  },
-  {
-    category: "Data Analysis & Visualization",
-    technologies: [
-      "Pandas",
-      "NumPy",
-      "Plotly",
-      "Matplotlib",
-      "Jupyter",
-      "Streamlit"
-    ],
-    icon: "bar-chart"
-  },
-  {
-    category: "Deployment & Cloud",
-    technologies: [
-      "Streamlit",
-      "Gradio",
-      "Vercel",
-      "AWS",
-      "Docker",
-      "Git/GitHub"
-    ],
-    icon: "cloud"
   }
 ];
 
@@ -241,6 +300,7 @@ export const navItems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Projects", href: "#projects" },
+  { name: "Publications", href: "#publications" },
   { name: "Skills", href: "#skills" },
   { name: "Contact", href: "#contact" }
 ];
@@ -251,6 +311,21 @@ export const statusColors = {
   "In Development": "bg-blue-500/10 text-blue-400 border-blue-500/20",
   "Planning": "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
   "Research": "bg-purple-500/10 text-purple-400 border-purple-500/20"
+};
+
+// Publication status colors
+export const publicationStatusColors = {
+  "Published": "bg-green-500/10 text-green-400 border-green-500/20",
+  "In Review": "bg-blue-500/10 text-blue-400 border-blue-500/20",
+  "Forthcoming": "bg-yellow-500/10 text-yellow-400 border-yellow-500/20"
+};
+
+// Publication type colors
+export const publicationTypeColors = {
+  "Research Paper": "bg-blue-500",
+  "Medium Article": "bg-green-500",
+  "Technical Report": "bg-purple-500",
+  "Preprint": "bg-orange-500"
 };
 
 // Category color mapping
