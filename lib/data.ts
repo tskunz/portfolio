@@ -57,9 +57,9 @@ export interface PersonalInfo {
 // Personal Information
 export const personalInfo: PersonalInfo = {
   name: "Trevor Kunz",
-  title: "Founder, TJ's Data Kitchen | Data Scientist | AI Developer",
+  title: "Data Scientist | AI Developer | Supply Chain",
   location: "Phoenix, Arizona",
-  currentRole: "Founder & Data Scientist at TJ's Data Kitchen | Spares Escalations at Lam Research",
+  currentRole: "Spares Escalations at Lam Research",
   education: [
     {
       degree: "MS Data Science",
@@ -77,15 +77,16 @@ export const personalInfo: PersonalInfo = {
     "Generative AI",
     "Supply Chain Analytics",
     "BBQ & Cooking Science",
-    "Running, Soccer, & Ultimate Frisbee"
+    "Running, Soccer, & Ultimate Frisbee",
+		"Traveling with my wife"
   ],
-  bio: "Founder of TJ's Data Kitchen, combining data science with culinary arts to make complex ML concepts accessible. Built production ML systems including custom RAG embeddings and transformers from scratch. Former TA in statistics and experimental design at SMU. 6+ years operational experience in Fortune 500 manufacturing. Passionate about applying rigorous data science to real-world problems—whether optimizing energy grids or perfecting char siu through physics-informed modeling.",
-  email: "tjdatakitchen@gmail.com",
+  bio: "Built production ML systems including custom RAG embeddings and transformers from scratch. Former TA in statistics and experimental design at SMU. 6+ years operational experience in Fortune 500 manufacturing. Passionate about applying rigorous data science to real-world problems—whether optimizing energy grids or perfecting char siu through physics-informed modeling.",
+  email: "trevors.kunz@gmail.com",
   social: {
     github: "https://github.com/tskunz",
     linkedin: "https://linkedin.com/in/trevor-kunz",
     huggingface: "https://huggingface.co/Tskunz",
-    youtube: "https://youtube.com/@Tjdatakitchen"
+    //youtube: "https://youtube.com/@Tjdatakitchen"
   }
 };
 
@@ -212,8 +213,7 @@ export const publications: Publication[] = [
     description: "Capstone research paper developing methodology to quantify how hyperscale AI data centers with flexible loads and battery storage can support Texas grid stability under Senate Bill 6 requirements.",
     coAuthors: ["Troy McSimov", "Jeff Billo"],
     status: "Published",
-    Citation: "McSimov, Troy; Kunz, Trevor S.; and Billo, Jeffrey (2025) "Availability Model to Evaluate AI Data Centers’ Role in Grid Stability," SMU Data Science Review: Vol. 9: No. 3, Article 3.",
-    url: "https://scholar.smu.edu/datasciencereview/vol9/iss3/3/" // Will add once published
+    url: "https://scholar.smu.edu/datasciencereview/vol9/iss3/3/"
   },
 ];
 
