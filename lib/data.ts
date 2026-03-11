@@ -211,8 +211,9 @@ export const publications: Publication[] = [
     date: "2025",
     description: "Capstone research paper developing methodology to quantify how hyperscale AI data centers with flexible loads and battery storage can support Texas grid stability under Senate Bill 6 requirements.",
     coAuthors: ["Troy McSimov", "Jeff Billo"],
-    status: "Forthcoming",
-    url: "" // Will add once published
+    status: "Published",
+    Citation: "McSimov, Troy; Kunz, Trevor S.; and Billo, Jeffrey (2025) "Availability Model to Evaluate AI Data Centers’ Role in Grid Stability," SMU Data Science Review: Vol. 9: No. 3, Article 3.",
+    url: "https://scholar.smu.edu/datasciencereview/vol9/iss3/3/" // Will add once published
   },
 ];
 
