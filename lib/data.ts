@@ -133,7 +133,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/tskunz/ERCOT-Availability-Model",
     huggingFaceUrl: "https://huggingface.co/spaces/Tskunz/ERCOT-Availability-Model",
     demoUrl: "https://huggingface.co/spaces/Tskunz/ERCOT-Availability-Model",
-    imageUrl: "/projects/ercot-grid.jpg" // Ensure this image exists in your public folder
+    imageUrl: "/projects/ercot-grid.jpg"
   },
   {
     id: "paul-graham-rag",
